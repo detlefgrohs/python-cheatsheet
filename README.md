@@ -25,12 +25,14 @@ if __name__ == '__main__':      # Skips next line if file was imported.
     main()                      # Runs `def main(): ...` function.
 ```
 
-|            | List | Dictionary | Tuple | Set |
-|------------|------|------------|-------|-----|
-| Unique     | No   | Yes        | No    | Yes |
-| Ordered    | Yes  | Yes        | Yes   | No  |
-| Changeable | Yes  | Yes        | No    | No  |
-| Indexed    | Yes  | No         | Yes   | No  |
+Collection Properties
+---------------------
+|            | List | Dictionary | Set | Tuple |
+|------------|------|------------|-----|-------|
+| Unique     | No   | Yes        | Yes | No    |
+| Ordered    | Yes  | Yes        | No  | Yes   |
+| Changeable | Yes  | Yes        | No  | No    |
+| Indexed    | Yes  | No         | No  | Yes   |
 
 List
 ----
@@ -113,16 +115,6 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 {k: v for k, v in <dict>.items() if k in keys}  # Filters the dictionary by keys.
 ```
 
-### Counter
-```python
->>> from collections import Counter
->>> counter = Counter(['blue', 'blue', 'blue', 'red', 'red'])
->>> counter['yellow'] += 1
->>> print(counter.most_common())
-[('blue', 3), ('red', 2), ('yellow', 1)]
-```
-
-
 Set
 ---
 ```python
@@ -156,7 +148,6 @@ Set
 <frozenset> = frozenset(<collection>)
 ```
 
-
 Tuple
 -----
 **Tuple is an immutable and hashable list.**
@@ -178,6 +169,14 @@ Point(x=1, y=2)
 (1, 2)
 ```
 
+### Counter
+```python
+>>> from collections import Counter
+>>> counter = Counter(['blue', 'blue', 'blue', 'red', 'red'])
+>>> counter['yellow'] += 1
+>>> print(counter.most_common())
+[('blue', 3), ('red', 2), ('yellow', 1)]
+```
 
 Range
 -----
@@ -193,14 +192,12 @@ Range
 [0, 1, 2]
 ```
 
-
 Enumerate
 ---------
 ```python
 for i, el in enumerate(<coll>, start=0):   # Returns next element and its index on each pass.
     ...
 ```
-
 
 Iterator
 --------
