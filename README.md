@@ -2394,9 +2394,11 @@ Progress Bar
 ```python
 # $ pip3 install tqdm
 >>> import tqdm, time
->>> for el in tqdm.tqdm([1, 2, 3], desc='Processing'):
+>>> progress = tqdm.tqdm([1, 2, 3], desc='Processing')
+>>> for el in progress :
+...     progress.set_description(f"Working on '{el}'")
 ...     time.sleep(1)
-Processing: 100%|████████████████████| 3/3 [00:03<00:00,  1.00s/it]
+Working on '3': 100%|████████████████████| 3/3 [00:03<00:00,  1.00s/it]
 ```
 
 
