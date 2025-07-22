@@ -25,6 +25,12 @@ if __name__ == '__main__':      # Skips next line if file was imported.
     main()                      # Runs `def main(): ...` function.
 ```
 
+|            | List | Dictionary | Tuple | Set |
+|------------|------|------------|-------|-----|
+| Unique     | No   | Yes        | No    | Yes |
+| Ordered    | Yes  | Yes        | Yes   | No  |
+| Changeable | Yes  | Yes        | No    | No  |
+| Indexed    | Yes  | No         | Yes   | No  |
 
 List
 ----
